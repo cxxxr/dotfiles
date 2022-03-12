@@ -13,7 +13,6 @@
 (set-focus-color "orange")
 (set-unfocus-color "gray")
 
-(run-shell-command "redshift&")
 (run-shell-command "xset r rate 250 30")
 (run-shell-command "xsetroot -solid slategray")
 
@@ -23,13 +22,9 @@
 (unless (stumpwm::head-mode-line (current-head))
   (toggle-mode-line (current-screen) (current-head)))
 
-#+(or)
 (setf *screen-mode-line-format*
       (list "^B"
-	    '(:eval (run-shell-command "date '+%R, %F %a'|tr -d [:cntrl:]" t))
-	    " ["
-	    '(:eval (stumpwm-helper-battery:battery-level-string))
-	    "]^b "
+            '(:eval (run-shell-command "date '+%R, %F %a'|tr -d [:cntrl:]" t))
             "[^B%n^b] %W"))
 
 (defcommand shutdown () () (run-shell-command "systemctl poweroff"))
