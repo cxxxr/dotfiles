@@ -4,8 +4,8 @@ xterm*metaSendsEscape: true
 xterm*wideChars: true
 xterm*forcePackedFont: false
 xterm*ximFont: -misc-fixed-medium-r-normal--14-130-75-75-c-140-jisx0208.1983-0
-xterm*faceName: DejaVu Sans Mono
-xterm*faceSize: 10.5
+xterm*faceName: Ubuntu Mono
+xterm*faceSize: 12
 xterm*faceNameDoublesize: Migu 1m
 xterm*background: #292929
 xterm*foreground: #ffffff
